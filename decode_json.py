@@ -1,10 +1,11 @@
-#importing libraries
-#import rich functions and classes
+# importing libraries
+# import rich functions and classes
 from rich.table import Table
 from rich.console import Console
 
-#new console object
+# new console object
 console = Console()
+
 
 def decode_json(json_data):
     """
@@ -13,10 +14,10 @@ def decode_json(json_data):
     Decodes JSON response from API
     """
 
-    #make a new table
+    # make a new table
     table = Table(show_header=True, header_style="bold magenta")
 
-    #configure table
+    # configure table
     table = Table(show_header=True, header_style="bold magenta")
     table.add_column("ID", style="dim", width=12)
     table.add_column("Name", justify="center")
@@ -32,7 +33,8 @@ def decode_json(json_data):
     # iterate through response
     for i in range(len(games)):
         new_dict = games[i]['Game']
-        #add response to table
-        table.add_row(f"{new_dict['ID: ']}", f"{new_dict['Name: ']}", f"{new_dict['Genre: ']}", f"{new_dict['Platform: ']}", f"{new_dict['Publisher: ']}", f"{new_dict['Year']}")
+        # add response to table
+        table.add_row(f"{new_dict['ID: ']}", f"{new_dict['Name: ']}", f"{new_dict['Genre: ']}",
+                      f"{new_dict['Platform: ']}", f"{new_dict['Publisher: ']}", f"{new_dict['Year']}")
     console.print(table)
     enter = input("Press any key to continue...")
