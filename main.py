@@ -29,7 +29,7 @@ def main():
     while True:
         console.print(Panel.fit("[italic yellow]Please type the letters that are highlighted in green to access data from the API[/italic yellow]\n[bold green]D[/bold green]isplay games\n[bold green]F[/bold green]ind game\n[bold green]U[/bold green]pdate game\n[bold green]A[/bold green]dd game\n[bold green]De[/bold green]lete game\n[bold green]Q[/bold green]uit", title="Video Game API - Menu 🎮", subtitle="By Joshua Blewitt"))
 
-        console.print("[brown]Enter your choice[/brown]")
+        console.print("[green]Enter your choice[/green]")
         choice = input().upper()
 
         # it is a switch statement I swear
